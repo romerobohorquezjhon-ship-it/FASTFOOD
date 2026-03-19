@@ -58,7 +58,10 @@ function agregarItem(nombre, precio) {
     pedidoActual.push({ id: Date.now(), nombre, precio });
     actualizarTicket();
 }
-
+function limpiarPedido() {
+    pedidoActual = [];
+    actualizarTicket();
+}
 function actualizarTicket() {
     const lista = document.getElementById('lista-seleccionada');
     const totalDisplay = document.getElementById('total-precio');
